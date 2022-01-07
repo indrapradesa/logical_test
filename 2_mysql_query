@@ -1,0 +1,6 @@
+SELECT *
+FROM mahasiswa
+WHERE mhs_nama
+AND nila = (SELECT MAX(nilai)
+              FROM tb_mahasiswa
+              WHERE mhs_nama);
